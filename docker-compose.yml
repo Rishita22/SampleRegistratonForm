@@ -1,0 +1,14 @@
+version : '3'
+services:
+  webservice:
+    build:
+      context: "/home/ec2-user/SampleRegistratonForm"
+      dockerfile: "Dockerfile.html"
+    ports:
+      - "80:80"
+  appservice:
+    build:
+      context: "."
+      dockerfile: "Dockerfile"
+    ports:
+      - "8080:8080"
