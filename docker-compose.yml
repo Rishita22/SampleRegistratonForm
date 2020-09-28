@@ -9,7 +9,7 @@ services:
 
   appservice:
     build:
-      context: "."
+      context: "https://github.com/Rishita22/SampleRegistratonForm.git"
       dockerfile: "Dockerfile"
     ports:
       - "8080:8080"
