@@ -2,14 +2,14 @@ version : "3"
 services:
   webservice:
     build:
-      context: "https://github.com/Rishita22/SampleRegistratonForm.git"
+      context: "/home/ec2-user"
       dockerfile: "Dockerfile.httpd"
     ports:
       - "80:80"
 
   appservice:
     build:
-      context: "https://github.com/Rishita22/SampleRegistratonForm.git"
+      context: "/home/ec2-user"
       dockerfile: "Dockerfile"
     ports:
       - "8080:8080"
