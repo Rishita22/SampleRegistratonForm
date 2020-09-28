@@ -1,0 +1,15 @@
+version : "3"
+services:
+  webservice:
+    build:
+      context: "https://github.com/Rishita22/SampleRegistratonForm.git"
+      dockerfile: "Dockerfile.httpd"
+    ports:
+      - "80:80"
+
+  appservice:
+    build:
+      context: "."
+      dockerfile: "Dockerfile"
+    ports:
+      - "8080:8080"
