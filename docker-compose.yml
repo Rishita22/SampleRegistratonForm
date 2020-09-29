@@ -5,11 +5,11 @@ services:
       context: "/home/ec2-user"
       dockerfile: "Dockerfile.httpd"
     ports:
-      - "90:80"
+      - "80:80"
 
   appservice:
     build:
       context: "/home/ec2-user"
       dockerfile: "Dockerfile"
     ports:
-      - "100:8080"
+      - "8080:8080"
