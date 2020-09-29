@@ -9,7 +9,7 @@ services:
 
   appservice:
     build:
-      context: "."
+      context: "/home/ec2-user"
       dockerfile: "Dockerfile"
     ports:
       - "100:8080"
