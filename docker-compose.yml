@@ -1,15 +1,15 @@
-version : "3.8"
+version : "3"
 services:
   webservice:
     build:
       context: "/home/ec2-user"
       dockerfile: "Dockerfile.httpd"
     ports:
-      - "90:80"
+      - "80:80"
 
   appservice:
     build:
       context: "/home/ec2-user"
-      dockerfile: "Dockerfile"
+      dockerfile: "Dockerfile.tomcat"
     ports:
-      - "100:8080"
+      - "8080:8080"
