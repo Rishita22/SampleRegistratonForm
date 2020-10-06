@@ -14,8 +14,8 @@ spec:
       containers:
         - name : tomcat
           image : devtechieops/form:1.0
-          containerPorts:
-            - port : 8080
+          ports:
+            - containerPort : 8080
      selector:
        matchLabels:
          app : tomcat
