@@ -1,23 +1,23 @@
 apiVersion : apps/v1
 kind: Deployment
 metadata:
-  name : form-deployment
+  name : httpd-deployment
   labels:
-    app: tomcat
+    app: httpd
 
 spec:
   template:
     metadata:
       labels:
-        app: tomcat
+        app: httpd
     spec:
       containers:
-        - name : tomcat
-          image : devtechieops/form:1.0
+        - name : httpd
+          image : devtechieops/web:1.0
           ports:
-            - containerPort : 8080
+            - containerPort : 80
   selector:
     matchLabels:
-      app: tomcat
+      app: httpd
 
                  
