@@ -1,0 +1,22 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata :
+  name : sampleform-deployment
+  labels:
+    app : tomcat
+
+spec:
+  template:
+    metadata:
+      labels:
+        app: tomcat
+    spec:
+      containers:
+        - name : tomcat
+          image : devtechieops/form:1.0
+          containerPorts:
+            - port : 8080
+     selector:
+       matchLabels:
+         app : tomcat
+~                      
