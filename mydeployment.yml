@@ -1,7 +1,7 @@
 apiVersion : apps/v1
 kind: Deployment
 metadata:
-  name : httpd-deployment
+  name : web-deployment
   labels:
     app: httpd
 
@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name : httpd
-          image : devtechieops/webapp:2.0
+          image : devtechieops/web:4.0
           ports:
             - containerPort : 80
   selector:

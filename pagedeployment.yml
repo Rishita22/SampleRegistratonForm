@@ -1,0 +1,24 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata: 
+  name: page-deployment
+  labels:
+    app: page
+spec:
+  template:
+    metadata:
+      labels:
+        app: page
+  spec: 
+    containers:
+      - name: sampleformpage
+        image: devtechieops/form:1.0
+        Ports:
+          - containerPort : 8080 
+  selector: 
+    matchLabels:
+      app: page
+
+
+
+
