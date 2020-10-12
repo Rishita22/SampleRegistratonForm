@@ -4,17 +4,18 @@ metadata:
   name: page-deployment
   labels:
     app: page
+
 spec:
   template:
     metadata:
       labels:
         app: page
-  spec: 
-    containers:
-      - name: sampleformpage
-        image: devtechieops/form:1.0
-        ports:
-          - containerPort : 8080 
+    spec: 
+      containers:
+        - name: sampleformpage
+          image: devtechieops/form:1.0
+          ports:
+            - containerPort : 8080 
   selector: 
     matchLabels:
       app: page
