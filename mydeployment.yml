@@ -16,6 +16,10 @@ spec:
           image : devtechieops/web:4.0
           ports:
             - containerPort : 80
+        - name: sampleformpage
+          image: devtechieops/form:1.0
+          ports:
+            - containerPort : 8080
   selector:
     matchLabels:
       app: httpd
