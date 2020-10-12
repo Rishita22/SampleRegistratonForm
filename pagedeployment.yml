@@ -13,7 +13,7 @@ spec:
     spec: 
       containers:
         - name: sampleformpage
-          image: devtechieops/form:1.0
+          image: devtechieops/form:2.0
           ports:
             - containerPort : 8080 
   selector: 
