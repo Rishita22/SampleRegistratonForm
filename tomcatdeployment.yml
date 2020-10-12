@@ -11,7 +11,7 @@ spec:
         app: tom
     spec:
       containers:
-        - name: tomcat_1
+        - name: tomcat1
           image: devtechieops/tom:1.0
           ports:
             - containerPort : 8080
