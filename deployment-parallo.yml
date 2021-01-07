@@ -12,9 +12,10 @@ spec:
     spec:
       containers:
         - name : parallo
-          image : devtechieops/parallo:1.0
+          image : devtechieops/parallo:2.0
           ports:
             - containerPort : 80
+  
   selector:
     matchLabels:
       app : parallo
