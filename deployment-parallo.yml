@@ -1,0 +1,20 @@
+apiVersion : "apps/v1"
+kind : Deployment
+metadata:
+  name : parallo-deployment
+  labels:
+    app : parallo
+spec:
+  template :
+    metadata:
+      labels :
+        app : parallo
+    spec:
+      containers:
+        - name : parallo
+          image : devtechieops/parallo:1.0
+          ports:
+            - containerPort : 80
+  selector:
+    matchLabels:
+      app : parallo
