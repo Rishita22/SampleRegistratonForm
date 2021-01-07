@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
         - name : java
-          image : devtechieops/java:2.0
+          image : devtechieops/java:3.0
           ports:
             - containerPort : 8080
   selector:

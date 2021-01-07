@@ -1,21 +1,21 @@
-apiVersion : "apps/v1"
-kind : Deployment
+apiVersion: "apps/v1"
+kind: Deployment
 metadata:
-  name : parallo-deployment
+  name: parallo-deployment
   labels:
-    app : parallo
+    app: parallo
 spec:
-  template :
+  template:
     metadata:
-      labels :
-        app : parallo
+      labels:
+        app: parallo
     spec:
       containers:
-        - name : parallo
-          image : devtechieops/parallo:2.0
+        - name: parallo
+          image: devtechieops/parallo:3.0
           ports:
-            - containerPort : 80
+            - containerPort: 80
   
   selector:
     matchLabels:
-      app : parallo
+      app: parallo
