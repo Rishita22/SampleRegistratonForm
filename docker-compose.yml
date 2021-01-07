@@ -3,7 +3,7 @@ services:
   webservice:
     build:
       context: "/home/ec2-user"
-      dockerfile: "Dockerfile.httpd"
+      dockerfile: "Dockerfile.parallo"
     ports:
       - "80:80"
 

@@ -1,0 +1,10 @@
+FROM httpd:latest
+RUN rm -rf /usr/local/apache2/htdocs/index.html
+RUN apt update -y
+RUN install wget -y
+RUN wget https://www.free-css.com/assets/files/free-css-templates/download/page261/parallo.zip
+RUN install unzip -y
+RUN unzip parallo.zip
+RUN rm -rf parallo.zip
+RUN mv templatemo_534_parallo/* /usr/local/apache2/htdocs/
+CMD httpd-foreground 
